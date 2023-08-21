@@ -480,8 +480,9 @@ class Calculation{
 }
 ```
 
-**Method Overriding:**
+**Dynamic/Runtime polymorphism:**
 Runtime polymorphism is also known as Dynamic binding, which is used to call an overridden method that can be resolved at the runtime. In other words, if a subclass provides a specific implementation of the method that has been declared by one of its parent class, it is known as method overriding. In this approach, the method name in the subclass must have the same name as parent class and also must be an IS-A relationship. 
+To achieve such type of polymorphism, we have to invoke the child class's overridden properties by creating a reference object of the parent class at runtime, and it is referred as *Dynamic method dispatch*.
 ```java
 class MobileBrand{
 	public void brandName(){
@@ -498,19 +499,62 @@ class Nokia extends MobileBrand{
 		System.out.println("Nokia Mobile Phone");
 	}
 }
+class MyPhone{
+	public static void main(String args[]){
+		MobileBrand m1 = new Samsung();
+		MobileBrand m2 = new Nokia();
+
+		m1.brandName();
+		m2.brandName();
+	}
+}
 ```
 > **NOTE:** We can not override a static method, as we need to invoke the static methods without creating any object of that class.
+
+Even if, we can override the derived class's method at runtime, but we can not achieve this property to override the data variables of the class at runtime. Like:
+```java
+class Java{
+	String concept = "Java";
+	void study(){
+		System.out.println("Learing " + concept);
+	}
+}
+class OOP{
+	String concept = "OOP";
+	void study(){
+		System.out.println("Learing " + concept);
+	}
+}
+class Main{
+	public static void main(String args[]){
+		Java jv = new OOP();
+		System.out.println(jv.concept);
+		jv.study();
+	}
+}
+```
+And the output will be:
+```
+Java
+Learning OOP
+```
+
 
 
 ## Additional Section
 **Do we use inheritance for only 'Code Reusability' purpose ?**
 
+The process by which one class gets all the properties (except the *private* properties) and functionalities(methods) of another class is called inheritance. The aim of inheritance is to provide the reusability of code so that a class has to write only the unique features and rest of the common properties and functionalities can be extended from the base/parent class. In fact, it also saves a good amount of time and effort by providing serveral interconnections between multiple classes that have some similar functionalities. Hence, another primary purpose of inheritance can be the establishment of the relatioship between several similar type of classes. Thus it ensures the classes have a "is-a" relationship, not the "has-a" relationship. Also, we can provide the new implementation of some existing functionalities by method overriding, which is only possible with the help of inhertance. 
+
+
 
 **Why do we need private variables?**
+
 We use private access modifier by restricting the access of any unusual access from outside of the class. Making the class members private is a good practice in Java for the development purpose. We can achieve high level encapsulation ability with the help of **private** access modifier. 
 Private members are well encapsulated in class and developers know that these variables can not be easily altered without the appropriate accessibility inside of the code. Private members are not meant to be altered with the help of outside programmers. The term "data hiding" refers to keep the internal data hidden from other classes rather than changing the values directly from outsiders. In short, private variables means 'controlled' access rather than 'no' access. 
 
 **When do we use Interface and when do we have to use Interface?**
+
 An abstract class is a such type of class that has at least one or more abstract method and also can have some regular methods. On the other hand, an interface is a user defined type that is syntactically almost similar to a class. It has some collection of field constant and some abstract methods without the method definition.
 Let's preview some use-case of these two terminologies:
 
