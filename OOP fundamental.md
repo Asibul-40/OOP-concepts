@@ -2,7 +2,7 @@
 # OOP (Object-Oriented Programming) Fundamental
  Objects are simply referred as real world entities (paper, book, pen etc.) that we may use in our day-to-day lives. **Object-Orientated programming** is a procedure to design a program using couple of classes and objects. Some popular object-oriented languages are Java, C#, python, C++ etc.
  ## Advantages
- - Much faster & easier to execute.
+ - Much faster in terms of development purpose & easier to execute.
  - Have clear structure to design a solution.
  - Modular & scalable, as it maintains DRY (Don't Repeat Yourself) principle.
  ## OOPs in Java
@@ -455,13 +455,13 @@ Method can be overloaded by two ways:
 Suppose, we want to perform the addition operation for the given any number of arguments. We can initialize the same **add()** method with different number of arguments.
 ```java
 class Calculation{
-	public int add(int a, int b){
+	public void add(int a, int b){
 		System.out.println(a  +  b);
 	}
-	public int add(int a, int b, int c) {
+	public void add(int a, int b, int c) {
 		System.out.println(a  +  b  +  c);	
 	}
-	public int add(int a, double b){
+	public void add(int a, double b){
 		System.out.println(a  +  b);
 	} 
 }
