@@ -414,19 +414,6 @@ hence, the output of the above code segment:
 2 Cold Coffee with 3 spoons of Sugar is ready with the cost of 400
 ```
 
-**Difference between Abstraction and Encapsulation:**
-The prominent difference between abstraction and encapsulation holds at their own implementation level. Abstraction focuses on what must be done and Encapsulation means how it should be done. Let's discuss some major differences between these two terms:
-
-*Data handling:*
-	By the definition of Abstraction, we are only concerned about which type of data are essential to perform some specific task. But in encapsulation, data is used after binding some additional secure layer by using the access modifiers.
-For example: If we want to open a Bank account on any bank, then the bank demands various types of data from their customer. Such as: Customer name, father's name, mother's name, address, date of birth, spouse's name, tax info, job info, insurance policy etc. Though we provide all these information but all of them are not associated for opening an account. Thus the Bank filters out the valid documents and store those documents in their internal system, which ensures the abstraction and encapsulation concept respectively.
-
-*Data hiding:*  
-Abstraction provides some abstract idea about the design level of any system, whereas encapsulation hides the internal working of any specific action or task.
-For example: By using smartphone, we can perform various tasks like: sending a message, capturing an image, calling a person, listening to music etc. We can only see what these features can do. But we do not need to know the internal logic of how these actions are performed. Thus the internal architecture and design implementations are hidden from the user.
-
-*Implementation:*
-Abstraction can be achieved either by Abstract class or Interface, whereas encapsulation is implemented by using the access modifiers and also by using some public getter & setter methods to access those class members. 
 
 
 ### Polymorphism
@@ -552,6 +539,22 @@ The process by which one class gets all the properties (except the *private* pro
 
 We use private access modifier by restricting the access of any unusual access from outside of the class. Making the class members private is a good practice in Java for the development purpose. We can achieve high level encapsulation ability with the help of **private** access modifier. 
 Private members are well encapsulated in class and developers know that these variables can not be easily altered without the appropriate accessibility inside of the code. Private members are not meant to be altered with the help of outside programmers. The term "data hiding" refers to keep the internal data hidden from other classes rather than changing the values directly from outsiders. In short, private variables means 'controlled' access rather than 'no' access. 
+
+**Difference between Abstraction and Encapsulation:**
+
+The prominent difference between abstraction and encapsulation holds at their own implementation level. Abstraction focuses on what must be done and Encapsulation means how it should be done. Let's discuss some major differences between these two terms:
+
+*Data handling:*
+	By the definition of Abstraction, we are only concerned about which type of data are essential to perform some specific task. But in encapsulation, data is used after binding some additional secure layer by using the access modifiers.
+For example: If we want to open a Bank account on any bank, then the bank demands various types of data from their customer. Such as: Customer name, father's name, mother's name, address, date of birth, spouse's name, tax info, job info, insurance policy etc. Though we provide all these information but all of them are not associated for opening an account. Thus the Bank filters out the valid documents and store those documents in their internal system, which ensures the abstraction and encapsulation concept respectively.
+
+*Data hiding:*  
+Abstraction provides some abstract idea about the design level of any system, whereas encapsulation hides the internal working of any specific action or task.
+For example: By using smartphone, we can perform various tasks like: sending a message, capturing an image, calling a person, listening to music etc. We can only see what these features can do. But we do not need to know the internal logic of how these actions are performed. Thus the internal architecture and design implementations are hidden from the user.
+
+*Implementation:*
+Abstraction can be achieved either by Abstract class or Interface, whereas encapsulation is implemented by using the access modifiers and also by using some public getter & setter methods to access those class members. 
+
 
 **When do we use Interface and when do we have to use Interface?**
 
