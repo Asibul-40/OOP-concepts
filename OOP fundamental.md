@@ -670,16 +670,29 @@ Association is a relation between two different classes which establishes throug
 3. *Many-to-one:* Many professor can be assigned to one particular department for teaching.
 4. Many-to-many: Multiple users can have their multiple bank accounts on multiple different bank.
 
+
+
 Association have two types of forms. 
 > Aggregation
 
 > Composition
+
+
+![Untitled Diagram (5)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/525509ce-9d68-4e20-8ee8-5b48b02b2af8)
+
+
 
 Let's have a brief discussion on both of these terms:
 
 **Aggregation:**
 
 Aggregation in java is a form of "has-a" relationship between two classes. It can be defined as loosely coupled relationship between two or more classes, means the two classes are not completely dependent on each other. Although both classes are associated with each other, one can exist without the other independently. Some real world entity relationships can be:
+
+
+![Untitled Diagram (3)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/643d8f31-7c5a-4f54-bebb-f16d9616d197)
+
+
+
 Suppose, we have two class objects of a *Bank* and the *Bank employee*. We can model a relationship between these two object. Let's assume, Bank authority has decided to close all their activities and also close the Bank forever. Due to this action, the employees will not be affected that much as they can get any other job for their livelihood. Hence these two objects are not totally dependent on each other.
 Another example can be a *Car* and a *Music player*. The can will start to move even if it has no music player in it. Also, the music player is not dependent on the car, as it can be used for another purpose as well. 
 
