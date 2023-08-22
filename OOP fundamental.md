@@ -1,4 +1,5 @@
 
+
 # OOP (Object-Oriented Programming) Fundamental
  Objects are simply referred as real world entities (paper, book, pen etc.) that we may use in our day-to-day lives. **Object-Orientated programming** is a procedure to design a program using couple of classes and objects. Some popular object-oriented languages are Java, C#, python, C++ etc.
  ## Advantages
@@ -306,6 +307,8 @@ Person p = new Person();
 ```
 
 **Abstraction through Interface:**
+An interface in Java is a specification of method prototypes where only the abstract methods are present. To create an object of this type we need to implement this interface and provide a body for all the abstract methods of the interface. The user who want to use the methods of the interface, he/she only knows the interface's methods, information about the implementation is completely hidden from the user and thus abstraction is achieved. Consider the following example:
+
 ```java
 interface  SmartPhone {
 	void  powerButton();
@@ -658,3 +661,159 @@ Duck can swim.
 Duck's sound is like quack-quack.
 ```
 
+**What is Association, Aggregation, Composition. Explain the inter class-relationship between these terms with inheritance.**
+
+Association is a relation between two different classes which establishes through their Objects. Association refers to the "has-a" relationship between those two classes. In a real-world, we see everything with some relationship between various types of objects. However, association can be classified of four types. Let's discuss these with appropriate example:
+
+1. *One-to-one:*  To be a part of a country, every citizen their own identity number. Like: for Bangladeshi people we have our unique NID (National Identity card) card.
+2. *One-to-many:* A student can take tution from multiple teacher.
+3. *Many-to-one:* Many professor can be assigned to one particular department for teaching.
+4. Many-to-many: Multiple users can have their multiple bank accounts on multiple different bank.
+
+Association have two types of forms. 
+> Aggregation
+
+> Composition
+
+Let's have a brief discussion on both of these terms:
+
+**Aggregation:**
+
+Aggregation in java is a form of "has-a" relationship between two classes. It can be defined as loosely coupled relationship between two or more classes, means the two classes are not completely dependent on each other. Although both classes are associated with each other, one can exist without the other independently. Some real world entity relationships can be:
+Suppose, we have two class objects of a *Bank* and the *Bank employee*. We can model a relationship between these two object. Let's assume, Bank authority has decided to close all their activities and also close the Bank forever. Due to this action, the employees will not be affected that much as they can get any other job for their livelihood. Hence these two objects are not totally dependent on each other.
+Another example can be a *Car* and a *Music player*. The can will start to move even if it has no music player in it. Also, the music player is not dependent on the car, as it can be used for another purpose as well. 
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+class Music {
+	private  String name;
+	Music(String name) {
+		this.name = name;
+	}
+	public  String getName() {
+		return  this.name;
+	}
+}
+class MusicPlayer {
+	private  String brandName;
+	private  List<Music> musicList;
+	MusicPlayer(String brandName, List<Music> songs) {
+		this.brandName = brandName;
+		this.musicList = songs;
+	}
+	public  String getBrandName() {
+		return brandName;
+	}
+	public  List<Music> getMusicList() {
+		return musicList;
+	}
+}
+class Car {
+	private  String carModel;
+	private  MusicPlayer musicPlayer;
+	Car(String model, MusicPlayer musicPlayer) {
+		this.carModel = model;
+		this.musicPlayer = musicPlayer;
+	}
+
+	public  String getCarModel() {
+		return  this.carModel;
+	}
+	public  List<Music> getAllMusic() {
+		List<Music> songs = musicPlayer.getMusicList();
+		for (Music song : songs) {
+		System.out.println(musicPlayer.getBrandName() + " MusicPlayer has songs with name = " + song.getName() + " in "
+			+ carModel + " Car.");
+	}
+	return songs;
+	}
+	public  void start() {
+		System.out.println("Car has been started..!");
+	}
+}
+class Main {
+	public  static  void main(String args[]) {
+
+	Music m1 = new Music("abc");
+	Music m2 = new Music("xyz");
+
+	List<Music> songs = new  ArrayList<Music>();
+	songs.add(m1);
+	songs.add(m2);
+
+	MusicPlayer m_player = new MusicPlayer("Xiaomi", songs);
+	Car car = new Car("Premio", m_player);
+	car.getAllMusic();
+	car.start();
+	}
+}
+```
+hence, the output will be:
+```
+Xiaomi MusicPlayer has songs with name = abc in Premio Car.
+Xiaomi MusicPlayer has songs with name = xyz in Premio Car.
+Car has been started..!
+```
+
+**Composition:**
+
+Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. Let's explore some examples:
+Suppose, we have two objects, a *car* and a *car-engine*. We can build-up some relationship between these two objects. A car will never start to move without an engine. Also, a car-engine will remain useless if there exists no cars as well. Thus, the two objects are highly dependent on each other.
+Another useful example can be: A *library* and *books*. A library has different types of books that are organized properly. The existence of library will be vanished if somehow all the books are destroyed for some reason, and vice-versa. The sample code for the library and book object is demonstrated below: 
+```java
+import java.util.ArrayList;
+import java.util.List;
+class Book {
+	private  String name;
+	private  String author;
+	Book(String name, String author) {
+		this.name = name;
+		this.author = author;
+	}
+	public  String getName() {
+		return  this.name;
+	}
+	public  String getAuthor() {
+		return  this.author;
+	}
+}
+class Library {
+	private  String name;
+	private  List<Book> books;
+	Library(String name, List<Book> books) {
+		this.name = name;
+		this.books = books;
+	}
+	public  String getName() {
+		return  this.name;
+	}
+	public  void getBooks() {
+		List<Book> allBook;
+		for (Book book : books) {
+		System.out.println( "LibraryName = " + name + " has a bookname = " + book.getName() + " of author = "
+			+ book.getAuthor());
+		}
+	}
+}
+public  class Main {
+	public  static  void main(String args[]) {
+		Book book1 = new Book("ABC", "Author1");
+		Book book2 = new Book("XYZ", "Author2");
+
+		List<Book> books = new  ArrayList<Book>();
+		books.add(book1);
+		books add(book2);
+
+		Library library = new Library("BookStall", books);
+		library.getBooks();
+	}
+}
+```
+So the output will be:
+```
+LibraryName = BookStall has a bookname = ABC of author = Author1
+LibraryName = BookStall has a bookname = XYZ of author = Author2
+```
+However, understanding different types of association helps the developers to write code efficiently that closely related to the real-life problems. 
