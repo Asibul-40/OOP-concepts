@@ -309,6 +309,7 @@ Person p = new Person();
 ^
 ```
 
+
 **Abstraction through Interface:**
 
 An interface in Java is a specification of method prototypes where only the abstract methods are present. To create an object of this type we need to implement this interface and provide a body for all the abstract methods of the interface. The user who want to use the methods of the interface, he/she only knows the interface's methods, information about the implementation is completely hidden from the user and thus abstraction is achieved. Consider the following example:
@@ -548,9 +549,18 @@ The process by which one class gets all the properties (except the *private* pro
 **Why do we need private variables?**
 
 We use private access modifier by restricting the access of any unusual access from outside of the class. Making the class members private is a good practice in Java for the development purpose. We can achieve high level encapsulation ability with the help of **private** access modifier. 
-Private members are well encapsulated in class and developers know that these variables can not be easily altered without the appropriate accessibility inside of the code. Private members are not meant to be altered with the help of outside programmers. The term "data hiding" refers to keep the internal data hidden from other classes rather than changing the values directly from outsiders. In short, private variables means 'controlled' access rather than 'no' access. 
+Private members are well encapsulated in class and developers know that these variables can not be easily altered without the appropriate accessibility inside of the code. Private members are not meant to be altered with the help of outside programmers. The term "data hiding" refers to keep the internal data hidden from other classes rather than changing the values directly from outsiders.
 
-**Difference between Abstraction and Encapsulation:**
+**What is the necessity of getter & setter method ?**
+
+To access the private properties of a class, we need to create some public medium of access. And those public medium can be defined as getter and setter methods. However let's focus some other usecases of these public methods:
+
+1. Suppose, we want to add some additional security layer in our authentication system. So we have to setup the validation process in the setter method.
+2. If we want to make a variable read-only, then we can only provide the getter method and omit the setter methods.
+3. Debugging can also be helpful by setting up the getter & setter methods.
+
+
+**Difference between Abstraction and Encapsulation.**
 
 The prominent difference between abstraction and encapsulation holds at their own implementation level. Abstraction focuses on what must be done and Encapsulation means how it should be done. Let's discuss some major differences between these two terms:
 
@@ -672,6 +682,10 @@ Duck's sound is like quack-quack.
 
 Association is a relation between two different classes which establishes through their Objects. Association refers to the "has-a" relationship between those two classes. In a real-world, we see everything with some relationship between various types of objects. However, association can be classified of four types. Let's discuss these with appropriate example:
 
+
+![Untitled Diagram (5)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/525509ce-9d68-4e20-8ee8-5b48b02b2af8)
+
+
 1. *One-to-one:*  To be a part of a country, every citizen their own identity number. Like: for Bangladeshi people we have our unique NID (National Identity card) card.
 2. *One-to-many:* A student can take tution from multiple teacher.
 3. *Many-to-one:* Many professor can be assigned to one particular department for teaching.
@@ -685,7 +699,7 @@ Association have two types of forms.
 > Composition
 
 
-![Untitled Diagram (5)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/525509ce-9d68-4e20-8ee8-5b48b02b2af8)
+![Untitled Diagram (3)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/643d8f31-7c5a-4f54-bebb-f16d9616d197)
 
 
 
@@ -694,10 +708,6 @@ Let's have a brief discussion on both of these terms:
 **Aggregation:**
 
 Aggregation in java is a form of "has-a" relationship between two classes. It can be defined as loosely coupled relationship between two or more classes, means the two classes are not completely dependent on each other. Although both classes are associated with each other, one can exist without the other independently. Some real world entity relationships can be:
-
-
-![Untitled Diagram (3)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/643d8f31-7c5a-4f54-bebb-f16d9616d197)
-
 
 
 Suppose, we have two class objects of a *Bank* and the *Bank employee*. We can model a relationship between these two object. Let's assume, Bank authority has decided to close all their activities and also close the Bank forever. Due to this action, the employees will not be affected that much as they can get any other job for their livelihood. Hence these two objects are not totally dependent on each other.
