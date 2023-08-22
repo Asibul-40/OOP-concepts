@@ -240,9 +240,12 @@ BlackDog is eating DogFood...!
 ### Abstraction
 Abstraction is a process which displays only the information needed and hides the unnecessary information. The main purpose of abstraction is data hiding, means selecting the only necessary information from a large amount of data. Thus abstraction reduces programming complexities & efforts.
  Abstraction can be achieved by two ways:
-	 - Abstract class
+	 - Abstract class &
 	 - Interface
+
+  
 **Abstraction through Abstract Class:** 
+
 An abstract class is a type of class where one or more abstract methods are present. An abstract method is a method that has only method definition but no implementation. Basically, abstract methods are used when two or more classes have that same method but with different implementation in different ways. Abstract class may have regular methods, but it must have one or more abstract methods. 
 Let's discuss about an example:
 Suppose, we have an abstract **Person** class which is the parent class for both **Employee** and **Teacher** class. And the **Person** class has one abstract method named as **info()** and a regular method as **eat()**. Here, both of the derived classes need to provide their own different implementation for the **info()** method. Let's jump into the code segment:  
@@ -307,6 +310,7 @@ Person p = new Person();
 ```
 
 **Abstraction through Interface:**
+
 An interface in Java is a specification of method prototypes where only the abstract methods are present. To create an object of this type we need to implement this interface and provide a body for all the abstract methods of the interface. The user who want to use the methods of the interface, he/she only knows the interface's methods, information about the implementation is completely hidden from the user and thus abstraction is achieved. Consider the following example:
 
 ```java
@@ -420,6 +424,7 @@ hence, the output of the above code segment:
 
 
 ### Polymorphism
+
 Polymorphism refers to one object may have multiple forms. In OOP, polymorphism occurs when we have many classes with same type of common attributes but with different characteristics. And these classes are related to each other by inheritance. 
 ```java
 class Bird{
@@ -450,6 +455,7 @@ There exists two types of polymorphism:
 >	- Dynamic / Runtime polymorphism
 
 **Compile-time Polymorphism:**
+
 Compiler-time polymorphism is also known as Static polymorphism. Compile-time polymorphism can be achieved through method overloading. If a class have multiple methods of same name but with different method signature, then it is known as method overloading. Such type of polymorphism increases the readability of the program. 
 Method can be overloaded by two ways:
 	- By changing the number of arguments
@@ -471,6 +477,7 @@ class Calculation{
 ```
 
 **Dynamic/Runtime polymorphism:**
+
 Runtime polymorphism is also known as Dynamic binding, which is used to call an overridden method that can be resolved at the runtime. In other words, if a subclass provides a specific implementation of the method that has been declared by one of its parent class, it is known as method overriding. In this approach, the method name in the subclass must have the same name as parent class and also must be an IS-A relationship. 
 To achieve such type of polymorphism, we have to invoke the child class's overridden properties by creating a reference object of the parent class at runtime, and it is referred as *Dynamic method dispatch*.
 ```java
@@ -509,7 +516,7 @@ class Java{
 		System.out.println("Learing " + concept);
 	}
 }
-class OOP{
+class OOP extends Java{
 	String concept = "OOP";
 	void study(){
 		System.out.println("Learing " + concept);
