@@ -559,7 +559,7 @@ For example: By using smartphone, we can perform various tasks like: sending a m
 Abstraction can be achieved either by Abstract class or Interface, whereas encapsulation is implemented by using the access modifiers and also by using some public getter & setter methods to access those class members. 
 
 
-**When do we use Interface and when do we have to use Interface?**
+**When do we use abstract class and when do we have to use Interface?**
 
 An abstract class is a such type of class that has at least one or more abstract method and also can have some regular methods. On the other hand, an interface is a user defined type that is syntactically almost similar to a class. It has some collection of field constant and some abstract methods without the method definition.
 Let's preview some use-case of these two terminologies:
