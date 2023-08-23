@@ -168,6 +168,11 @@ This is a Novel...!
 
 #### A complete example of inheritance
  Let's assume, we have a parent class named as **Animal**.  It has some attributes (name, colour) and behavior (eat, sleep), which are common for all animal. 
+
+![Untitled Diagram (6)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/7b81b553-d270-4759-9ba0-8fd9747bdbd7)
+
+
+ 
  ```java
  class  Animal{
 	String  name;
@@ -194,6 +199,9 @@ class  Cat  extends  Animal{
 	public  void  eat(){
 		System.out.println(colour  +  name  +  " is eating "+name+"Food...!");
 	}
+	public  void  play(){
+		System.out.println(colour  +  name  +  " loves to play with human!");
+	}
 }
 ``` 
 We have defined the colour and name of both of these animal by *[parameterized constructor](https://w...content-available-to-author-only...t.com/java-constructor)*. Additionally, the behavior & attributes for **Cat** and **Dog** classes has also been modified according to their own characteristics. 
@@ -210,6 +218,9 @@ class  Dog  extends  Animal{
 	}
 	public  void  eat(){
 		System.out.println(colour  +  name  +  " is eating "+name+"Food...!");
+	}
+	public  void  sound(){
+		System.out.println(colour  +  name  +  " is barking...!");
 	}
 }
 ```
