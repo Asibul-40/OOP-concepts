@@ -325,6 +325,11 @@ Person p = new Person();
 
 An interface in Java is a specification of method prototypes where only the abstract methods are present. To create an object of this type we need to implement this interface and provide a body for all the abstract methods of the interface. The user who want to use the methods of the interface, he/she only knows the interface's methods, information about the implementation is completely hidden from the user and thus abstraction is achieved. Consider the following example:
 
+
+![Untitled Diagram (7)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/31242b1d-eb21-4177-93a5-1b967d41c015)
+
+
+
 ```java
 interface  SmartPhone {
 	void  powerButton();
@@ -652,6 +657,10 @@ Blueberry's colour is black.
 
 Let's dive into a proper example:
 We can simply think about a **Duck**, which is simply an animal that has the wings to fly, like other birds. It can also swim just like a fish. 
+
+![Untitled Diagram (8)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/ddec25cd-d344-4aad-b3dc-838a06ff7877)
+
+
 ```java
 interface Bird{
     void fly();
@@ -802,6 +811,10 @@ Car has been started..!
 
 Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. Let's explore some examples:
 Suppose, we have two objects, a *car* and a *car-engine*. We can build-up some relationship between these two objects. A car will never start to move without an engine. Also, a car-engine will remain useless if there exists no cars as well. Thus, the two objects are highly dependent on each other.
+
+![Composition-Car](https://github.com/Asibul-40/OOP-concepts/assets/77221075/600d9aad-7718-42a7-91cd-e7afc776af45)
+
+
 Another useful example can be: A *library* and *books*. A library has different types of books that are organized properly. The existence of library will be vanished if somehow all the books are destroyed for some reason, and vice-versa. The sample code for the library and book object is demonstrated below: 
 ```java
 import java.util.ArrayList;
