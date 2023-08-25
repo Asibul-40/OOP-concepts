@@ -1,5 +1,5 @@
 
-### Inheritance
+## Inheritance
   
 #### Single level
 
@@ -203,6 +203,12 @@ BlackDog is sleeping in floor...!
 BlackDog is eating DogFood...!
 ```
 
+### Do we use Inheritance for only "Code resuability" purpose ?
+My answer would be *No*. Though it is true that we can get the benefit of using the existing code by inheriting the parent class, but this should not be the only purpose of inheritance. One fundamental purpose of inheritance is *extensibility*. By inheriting, a subclass can get all the properties & behavior of parent class unless they are *private* element. We can provide new implementations to those attribbutes for the subclasses if needed. Even we can also add some new properties to all those subclasses. Consider the following example:
+
+![Untitled Diagram (17)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/0ffce83f-f300-4af3-b20b-5df5ae936747)
+
+The *Sonali Bank*, *City Bank*, *IFIC Bank* are the subclasses of the parent *Bank* class. All banks have their owm implementation for the inherited methods ( *interestRate(), policy() *). Also each bank have their own defined additional method that are mentioned with *blue* colour in the figure. Hence it ensures that inheritance provides the capability of extensibility and code reusability. But one thing to mention, inheritance is used for making relationship between multiple classes. If the classes don't have any type of relationship in real world, then we should avoid using inheritance just because of reusing the code. 
 
 # Class Relationships
 
@@ -332,5 +338,71 @@ Xiaomi MusicPlayer has songs with name = abc in Premio Car.
 Xiaomi MusicPlayer has songs with name = xyz in Premio Car.
 Car has been started..!
 ```
+
+**Composition:**
+
+Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. Let's explore some examples:
+Suppose, we have two objects, a *car* and a *car-engine*. We can build-up some relationship between these two objects. A car will never start to move without an engine. Also, a car-engine will remain useless if there exists no cars as well. Thus, the two objects are highly dependent on each other.
+
+
+
+Another useful example can be: A *library* and *books*. A library has different types of books that are organized properly. The existence of library will be vanished if somehow all the books are destroyed for some reason, and vice-versa. The sample code for the library and book object is demonstrated below: 
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+class Book {
+	private  String name;
+	private  String author;
+	Book(String name, String author) {
+		this.name = name;
+		this.author = author;
+	}
+	public  String getName() {
+		return  this.name;
+	}
+	public  String getAuthor() {
+		return  this.author;
+	}
+}
+class Library {
+	private  String name;
+	private  List<Book> books;
+	Library(String name, List<Book> books) {
+		this.name = name;
+		this.books = books;
+	}
+	public  String getName() {
+		return  this.name;
+	}
+	public  void getBooks() {
+		List<Book> allBook;
+		for (Book book : books) {
+		System.out.println( "LibraryName = " + name + " has a bookname = " + book.getName() + " of author = "
+			+ book.getAuthor());
+		}
+	}
+}
+public  class Main {
+	public  static  void main(String args[]) {
+		Book book1 = new Book("ABC", "Author1");
+		Book book2 = new Book("XYZ", "Author2");
+
+		List<Book> books = new  ArrayList<Book>();
+		books.add(book1);
+		books add(book2);
+
+		Library library = new Library("BookStall", books);
+		library.getBooks();
+	}
+}
+```
+So the output will be:
+```
+LibraryName = BookStall has a bookname = ABC of author = Author1
+LibraryName = BookStall has a bookname = XYZ of author = Author2
+```
+However, understanding different types of association helps the developers to write code efficiently that closely related to the real-life problems. 
+
 
 
