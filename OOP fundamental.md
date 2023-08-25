@@ -704,16 +704,19 @@ Duck's sound is like quack-quack.
 
 **What is Association, Aggregation, Composition. Explain the inter class-relationship between these terms with inheritance.**
 
-Association is a relation between two different classes which establishes through their Objects. Association refers to the "has-a" relationship between those two classes. In a real-world, we see everything with some relationship between various types of objects. However, association can be classified of four types. Let's discuss these with appropriate example:
+The term association defines a relationship between two different classes. Association refers to the "has-a" relationship between those two classes. However, it can be classified of four types. Let's discuss these with the appropriate example:
 
-
-![Untitled Diagram (5)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/525509ce-9d68-4e20-8ee8-5b48b02b2af8)
+![Untitled Diagram (18)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/b0a51aaa-6240-496e-a939-baf59f250655)
 
 
 1. *One-to-one:*  To be a part of a country, every citizen their own identity number. Like: for Bangladeshi people we have our unique NID (National Identity card) card.
 2. *One-to-many:* A student can take tution from multiple teacher.
 3. *Many-to-one:* Many professor can be assigned to one particular department for teaching.
-4. Many-to-many: Multiple users can have their multiple bank accounts on multiple different bank.
+4. *Many-to-many:* Multiple users can have their multiple bank accounts on multiple different bank.
+
+The following figure describes the overview of the whole class relationship in Java:
+![Untitled Diagram (13)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/159815f4-7d59-42f3-815d-29a4fca61d3c)
+
 
 
 
@@ -722,12 +725,6 @@ Association have two types of forms.
 
 > Composition
 
-
-![Untitled Diagram (3)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/643d8f31-7c5a-4f54-bebb-f16d9616d197)
-
-
-
-Let's have a brief discussion on both of these terms:
 
 **Aggregation:**
 
@@ -813,13 +810,14 @@ Car has been started..!
 
 **Composition:**
 
-Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. Let's explore some examples:
+Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. 
+
 Suppose, we have two objects, a *car* and a *car-engine*. We can build-up some relationship between these two objects. A car will never start to move without an engine. Also, a car-engine will remain useless if there exists no cars as well. Thus, the two objects are highly dependent on each other.
 
-![Composition-Car](https://github.com/Asibul-40/OOP-concepts/assets/77221075/600d9aad-7718-42a7-91cd-e7afc776af45)
 
 
 Another useful example can be: A *library* and *books*. A library has different types of books that are organized properly. The existence of library will be vanished if somehow all the books are destroyed for some reason, and vice-versa. The sample code for the library and book object is demonstrated below: 
+
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -875,3 +873,5 @@ LibraryName = BookStall has a bookname = ABC of author = Author1
 LibraryName = BookStall has a bookname = XYZ of author = Author2
 ```
 However, understanding different types of association helps the developers to write code efficiently that closely related to the real-life problems. 
+
+
