@@ -208,7 +208,7 @@ My answer would be *No*. Though it is true that we can get the benefit of using 
 
 ![Untitled Diagram (17)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/0ffce83f-f300-4af3-b20b-5df5ae936747)
 
-The *Sonali Bank*, *City Bank*, *IFIC Bank* are the subclasses of the parent *Bank* class. All banks have their owm implementation for the inherited methods ( *interestRate(), policy() *). Also each bank have their own defined additional method that are mentioned with *blue* colour in the figure. Hence it ensures that inheritance provides the capability of extensibility and code reusability. But one thing to mention, inheritance is used for making relationship between multiple classes. If the classes don't have any type of relationship in real world, then we should avoid using inheritance just because of reusing the code. 
+The *Sonali Bank*, *City Bank*, *IFIC Bank* are the subclasses of the parent *Bank* class. All banks have their owm implementation for the inherited methods ( **interestRate()**, **policy()** ). Also each bank have their own defined additional method that are mentioned with *blue* colour in the figure. Hence it ensures that inheritance provides the capability of extensibility and code reusability. But one thing to mention, inheritance is used for making relationship between multiple classes. If the classes don't have any type of relationship in real world, then we should avoid using inheritance just because of reusing the code. In the only motive is to achieve *Code reusibility*, then we should use **Composition** instead of inheritance.
 
 # Class Relationships
 
@@ -238,12 +238,15 @@ Have a look at this simple example in the following figure:
 
 
 ## Association
-Association is a relation between two different classes which establishes through their Objects. Association refers to the "has-a" relationship between those two classes. However, association can be classified of four types. Let's discuss these with appropriate example:
+The term association defines a relationship between two different classes. Association refers to the "has-a" relationship between those two classes. However, it can be classified of four types. Let's discuss these with the appropriate example:
+
+![Untitled Diagram (18)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/b0a51aaa-6240-496e-a939-baf59f250655)
+
 
 1. *One-to-one:*  To be a part of a country, every citizen their own identity number. Like: for Bangladeshi people we have our unique NID (National Identity card) card.
 2. *One-to-many:* A student can take tution from multiple teacher.
 3. *Many-to-one:* Many professor can be assigned to one particular department for teaching.
-4. Many-to-many: Multiple users can have their multiple bank accounts on multiple different bank.
+4. *Many-to-many:* Multiple users can have their multiple bank accounts on multiple different bank.
 
 The following figure describes the overview of the whole class relationship in Java:
 ![Untitled Diagram (13)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/159815f4-7d59-42f3-815d-29a4fca61d3c)
@@ -341,7 +344,8 @@ Car has been started..!
 
 **Composition:**
 
-Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. Let's explore some examples:
+Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. 
+
 Suppose, we have two objects, a *car* and a *car-engine*. We can build-up some relationship between these two objects. A car will never start to move without an engine. Also, a car-engine will remain useless if there exists no cars as well. Thus, the two objects are highly dependent on each other.
 
 
