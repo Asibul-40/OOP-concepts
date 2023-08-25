@@ -525,7 +525,7 @@ class MyPhone{
 ```
 > **NOTE:** We can not override a static method, as we need to invoke the static methods without creating any object of that class.
 
-Even if, we can override the derived class's method at runtime, but we can not achieve this property to override the data variables of the class at runtime. Like:
+Even if, we can override the derived class's method at runtime, but we can not achieve this property to override the data variables of a class at runtime. Like:
 ```java
 class Java{
 	String concept = "Java";
