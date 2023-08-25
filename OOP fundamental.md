@@ -558,7 +558,11 @@ Learning OOP
 ## Additional Section
 **Do we use inheritance for only 'Code Reusability' purpose ?**
 
-The process by which one class gets all the properties (except the *private* properties) and functionalities(methods) of another class is called inheritance. The aim of inheritance is to provide the reusability of code so that a class has to write only the unique features and rest of the common properties and functionalities can be extended from the base/parent class. In fact, it also saves a good amount of time and effort by providing serveral interconnections between multiple classes that have some similar functionalities. Hence, another primary purpose of inheritance can be the establishment of the relatioship between several similar type of classes. Thus it ensures the classes have a "is-a" relationship, not the "has-a" relationship. Also, we can provide the new implementation of some existing functionalities by method overriding, which is only possible with the help of inhertance. 
+My answer would be *No*. Though it is true that we can get the benefit of using the existing code by inheriting the parent class, but this should not be the only purpose of inheritance. One fundamental purpose of inheritance is *extensibility*. By inheriting, a subclass can get all the properties & behavior of parent class unless they are *private* element. We can provide new implementations to those attribbutes for the subclasses if needed. Even we can also add some new properties to all those subclasses. Consider the following example:
+
+![Untitled Diagram (17)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/0ffce83f-f300-4af3-b20b-5df5ae936747)
+
+The *Sonali Bank*, *City Bank*, *IFIC Bank* are the subclasses of the parent *Bank* class. All banks have their owm implementation for the inherited methods ( **interestRate()**, **policy()** ). Also each bank have their own defined additional method that are mentioned with *blue* colour in the figure. Hence it ensures that inheritance provides the capability of extensibility and code reusability. But one thing to mention, inheritance is used for making relationship between multiple classes. If the classes don't have any type of relationship in real world, then we should avoid using inheritance just because of reusing the code. In the only motive is to achieve *Code reusibility*, then we should use **Composition** instead of inheritance.
 
 
 
