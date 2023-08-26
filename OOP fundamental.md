@@ -388,8 +388,10 @@ Here we can see that the internal functionality of *Samsung* and *Nokia* phone a
 
 
 ### Encapsulation
-Encapsulation is one of the core concepts of OOP fundamental concepts. It is the process of binding the data together such that the whole data turns into a single unit. As a result, this kind of approach ensures the safety as it keeps the data safe from outside interference and misuse. In this process, the data can only be accessed by the current class's methods, which is known as data hiding. Thus encapsulation acts as a protective wrapper that prevents the code & data from being accessed by outsiders with the help of a well-defined interface. 
+Encapsulation is one of the core concepts of OOP fundamental concepts. It is the process of binding the data together such that the whole data turns into a single unit. In this process, the data can only be accessed by the current class's methods, which is known as data hiding. 
+
 Encapsulation is achieved by making the class members as **private, protected, public** (by providing specific access to the data). To get and modify the values of the members, there are also some public getter and setter methods. Thus the class members become read-only or write-only with the help of encapsulation. 
+
 Let's dive into an example:
 Suppose, we want to make a cup of coffee. To make different types of coffee we need different types of ingredients. The overall cost will be changed according to the requirements of the coffee details. Let's say we only need the coffee type and how many orders of coffee the customer need. To set these value we have private setter methods (e.g. **setType()**, **setTotalCoffee()**, **setSugarAmount()**) and to get the coffee the customer needs to call the public method **makeCoffee()**. Thus he/she can get the coffee with the auto generated fixed price.
 ```java
@@ -473,10 +475,11 @@ There exists two types of polymorphism:
 
 **Compile-time Polymorphism:**
 
-Compiler-time polymorphism is also known as Static polymorphism. Compile-time polymorphism can be achieved through method overloading. If a class have multiple methods of same name but with different method signature, then it is known as method overloading. Such type of polymorphism increases the readability of the program. 
-Method can be overloaded by two ways:
-	- By changing the number of arguments
-	- By changing the data type
+Compiler-time polymorphism is also known as Static polymorphism. Compile-time polymorphism can be achieved through method overloading. If a class have multiple methods of same name but with different method signature, then it is known as method overloading.
+
+Methods can be overloaded by two ways:
+- By changing the number of arguments.
+- By changing the data type of the arguments.
 
 Suppose, we want to perform the addition operation for the given any number of arguments. We can initialize the same **add()** method with different number of arguments.
 ```java
@@ -496,6 +499,7 @@ class Calculation{
 **Dynamic/Runtime polymorphism:**
 
 Runtime polymorphism is also known as Dynamic binding, which is used to call an overridden method that can be resolved at the runtime. In other words, if a subclass provides a specific implementation of the method that has been declared by one of its parent class, it is known as method overriding. In this approach, the method name in the subclass must have the same name as parent class and also must be an IS-A relationship. 
+
 To achieve such type of polymorphism, we have to invoke the child class's overridden properties by creating a reference object of the parent class at runtime, and it is referred as *Dynamic method dispatch*.
 ```java
 class MobileBrand{
@@ -568,7 +572,7 @@ The *Sonali Bank*, *City Bank*, *IFIC Bank* are the subclasses of the parent *Ba
 
 **Why do we need private variables?**
 
-We use private access modifier by restricting the access of any unusual access from outside of the class. Making the class members private is a good practice in Java for the development purpose. We can achieve high level encapsulation ability with the help of **private** access modifier. 
+We use private access modifier by restricting the access of any unusual access from outside of the class. We can achieve high level encapsulation ability with the help of **private** access modifier. <br/>
 Private members are well encapsulated in class and developers know that these variables can not be easily altered without the appropriate accessibility inside of the code. Private members are not meant to be altered with the help of outside programmers. The term "data hiding" refers to keep the internal data hidden from other classes rather than changing the values directly from outsiders.
 
 **What is the necessity of getter & setter method ?**
@@ -586,10 +590,12 @@ The prominent difference between abstraction and encapsulation holds at their ow
 
 *Data handling:*
 	By the definition of Abstraction, we are only concerned about which type of data are essential to perform some specific task. But in encapsulation, data is used after binding some additional secure layer by using the access modifiers.
+ 
 For example: If we want to open a Bank account on any bank, then the bank demands various types of data from their customer. Such as: Customer name, father's name, mother's name, address, date of birth, spouse's name, tax info, job info, insurance policy etc. Though we provide all these information but all of them are not associated for opening an account. Thus the Bank filters out the valid documents and store those documents in their internal system, which ensures the abstraction and encapsulation concept respectively.
 
 *Data hiding:*  
 Abstraction provides some abstract idea about the design level of any system, whereas encapsulation hides the internal working of any specific action or task.
+
 For example: By using smartphone, we can perform various tasks like: sending a message, capturing an image, calling a person, listening to music etc. We can only see what these features can do. But we do not need to know the internal logic of how these actions are performed. Thus the internal architecture and design implementations are hidden from the user.
 
 *Implementation:*
