@@ -2,11 +2,11 @@
 
 # OOP (Object-Oriented Programming) Fundamental
  Objects are simply referred as real world entities (paper, book, pen etc.) that we may use in our day-to-day lives. **Object-Orientated programming** is a procedure to design a program using couple of classes and objects. Some popular object-oriented languages are Java, C#, python, C++ etc.
- ## Advantages
+ # Advantages
  - Much faster in terms of development purpose & easier to execute.
  - Have clear structure to design a solution.
  - Modular & scalable, as it maintains DRY (Don't Repeat Yourself) principle.
- ## OOPs in Java
+ # OOPs in Java
 Java is known for its simplicity, reliability, and portability in the programming landscape for decades. Similarly, OOPs in java is to improve code readability and reusability by defining a java program efficiently. 
 The main principles of object-oriented programming are *abstraction*, *encapsulation*, *polymorphism* and *inheritance*. Hence, some fundamental concepts of OOP:
  
@@ -17,7 +17,7 @@ The main principles of object-oriented programming are *abstraction*, *encapsula
  - Abstraction
  - Encapsulation
 
-### Objects & Classes
+## Objects & Classes
 Any entity that has state and behavior is known as object. In short, an object can be defined as an instance of a class. Whenever an object is created, it contains some an address and takes up some space in memory. These objects can have their own behavior & attributes. 
  Everything in java is associated with objects and classes. For example:
  We can treat an animal as an object. An animal has a *name*, *color*, *temped* etc. as attributes, and *walking*, *sleeping*, *food* as behavior. 
@@ -43,9 +43,9 @@ class MyAnimal{
  yelloowish white
  ```
  
-  ### Inheritance
+## Inheritance
   
-#### Single level
+### Single level
 
 In this level of inheritance, the derived class inherits all the properties from its parent class. This type of inheritance ensures code reusability & addition of new features in the derived class. 
 ```mermaid
@@ -83,7 +83,7 @@ The output of the above code is:
 kitty is walking...!
 ```
 
-#### Multilevel 
+### Multilevel 
 A class is derived from another class which is also derived from another different class, such type of inheritance is known as Multilevel inheritance. 
 ```mermaid
 	graph LR
@@ -124,7 +124,7 @@ Simple Horror movie..!
 Horror movie watching.
 ```
 
-#### Hierarchical level
+### Hierarchical level
 In such inheritance level, One parent class can have more than one child class. 
 ```mermaid
 	graph LR
@@ -166,7 +166,7 @@ Funny Comic books...!
 This is a Novel...!
 ``` 
 
-#### A complete example of inheritance
+### A complete example of inheritance
  Let's assume, we have a parent class named as **Animal**.  It has some attributes (name, colour) and behavior (eat, sleep), which are common for all animal. 
 
 ![Untitled Diagram (6)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/7b81b553-d270-4759-9ba0-8fd9747bdbd7)
@@ -248,7 +248,7 @@ BlackDog is eating DogFood...!
 ```
 
 
-### Abstraction
+## Abstraction
 Abstraction is a process which displays only the information needed and hides the unnecessary information. The main purpose of abstraction is data hiding, means selecting the only necessary information from a large amount of data. Thus abstraction reduces programming complexities & efforts.
  Abstraction can be achieved by two ways:
 	 - Abstract class &
@@ -387,7 +387,7 @@ Here we can see that the internal functionality of *Samsung* and *Nokia* phone a
 
 
 
-### Encapsulation
+## Encapsulation
 Encapsulation is one of the core concepts of OOP fundamental concepts. It is the process of binding the data together such that the whole data turns into a single unit. In this process, the data can only be accessed by the current class's methods, which is known as data hiding. 
 
 Encapsulation is achieved by making the class members as **private, protected, public** (by providing specific access to the data). To get and modify the values of the members, there are also some public getter and setter methods. Thus the class members become read-only or write-only with the help of encapsulation. 
@@ -442,7 +442,7 @@ hence, the output of the above code segment:
 
 
 
-### Polymorphism
+## Polymorphism
 
 Polymorphism refers to one object may have multiple forms. In OOP, polymorphism occurs when we have many classes with same type of common attributes but with different characteristics. And these classes are related to each other by inheritance. 
 ```java
@@ -560,7 +560,7 @@ Learning OOP
 
 
 ## Additional Section
-**Do we use inheritance for only 'Code Reusability' purpose ?**
+### Do we use inheritance for only 'Code Reusability' purpose ?
 
 My answer would be *No*. Though it is true that we can get the benefit of using the existing code by inheriting the parent class, but this should not be the only purpose of inheritance. One fundamental purpose of inheritance is *extensibility*. By inheriting, a subclass can get all the properties & behavior of parent class unless they are *private* element. We can provide new implementations to those attribbutes for the subclasses if needed. Even we can also add some new properties to all those subclasses. Consider the following example:
 
@@ -570,12 +570,12 @@ The *Sonali Bank*, *City Bank*, *IFIC Bank* are the subclasses of the parent *Ba
 
 
 
-**Why do we need private variables?**
+### Why do we need private variables?
 
 We use private access modifier by restricting the access of any unusual access from outside of the class. We can achieve high level encapsulation ability with the help of **private** access modifier. <br/>
 Private members are well encapsulated in class and developers know that these variables can not be easily altered without the appropriate accessibility inside of the code. Private members are not meant to be altered with the help of outside programmers. The term "data hiding" refers to keep the internal data hidden from other classes rather than changing the values directly from outsiders.
 
-**What is the necessity of getter & setter method ?**
+### What is the necessity of getter & setter method ?
 
 To access the private properties of a class, we need to create some public medium of access. And those public medium can be defined as getter and setter methods. However let's focus some other usecases of these public methods:
 
@@ -584,7 +584,7 @@ To access the private properties of a class, we need to create some public mediu
 3. Debugging can also be helpful by setting up the getter & setter methods.
 
 
-**Difference between Abstraction and Encapsulation.**
+### Difference between Abstraction and Encapsulation.
 
 The prominent difference between abstraction and encapsulation holds at their own implementation level. Abstraction focuses on what must be done and Encapsulation means how it should be done. Let's discuss some major differences between these two terms:
 
@@ -602,7 +602,7 @@ For example: By using smartphone, we can perform various tasks like: sending a m
 Abstraction can be achieved either by Abstract class or Interface, whereas encapsulation is implemented by using the access modifiers and also by using some public getter & setter methods to access those class members. 
 
 
-**When do we use abstract class and when do we have to use Interface?**
+### When do we use abstract class and when do we have to use Interface?
 
 An abstract class is a such type of class that has at least one or more abstract method and also can have some regular methods. On the other hand, an interface is a user defined type that is syntactically almost similar to a class. It has some collection of field constant and some abstract methods without the method definition.
 Let's preview some use-case of these two terminologies:
@@ -708,7 +708,7 @@ Duck can swim.
 Duck's sound is like quack-quack.
 ```
 
-**What is Association, Aggregation, Composition. Explain the inter class-relationship between these terms with inheritance.**
+### What is Association, Aggregation, Composition. Explain the inter class-relationship between these terms with inheritance.
 
 The term association defines a relationship between two different classes. Association refers to the "has-a" relationship between those two classes. However, it can be classified of four types. Let's discuss these with the appropriate example:
 
@@ -732,7 +732,7 @@ Association have two types of forms.
 > Composition
 
 
-**Aggregation:**
+### Aggregation:
 
 Aggregation in java is a form of "has-a" relationship between two classes. It can be defined as loosely coupled relationship between two or more classes, means the two classes are not completely dependent on each other. Although both classes are associated with each other, one can exist without the other independently. Some real world entity relationships can be:
 
@@ -814,7 +814,7 @@ Xiaomi MusicPlayer has songs with name = xyz in Premio Car.
 Car has been started..!
 ```
 
-**Composition:**
+### Composition:
 
 Composition in association, is a form of relationship where the classes are tightly coupled, means the classes are highly dependent on each other. This type of association is referred as *belongs-to* or *is part-of* association. Here, the classes cannot exist independent of each other. If the *container* class which holds the objects of the *member* class is removed, it also means logically the smaller class cannot exist. 
 
