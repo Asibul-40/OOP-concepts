@@ -52,36 +52,7 @@ In this level of inheritance, the derived class inherits all the properties from
 	graph LR
 	A((Animal)) -- properties & attributes --> B((Cat))
 ```
-Let's see the example,
-```java
-class Animal{
-	String name;
-	boolean temped;
-	public void walk(){
-		System.out.println("Parent Animal is walking...!");
-	}
-}
-class Cat extends Animal{
-	Cat(String name, boolean temped)
-	{
-		this.name = name;
-		this.temped = temped;
-	}
-	public void walk(){
-		System.out.println(name + " is walking...!");		
-	}
-}
-class MyAnimal{
-	public static void main(String args[]){
-		Cat cat = new Cat("Kitty", true);
-		cat.walk();
-	} 
-}
-```
-The output of the above code is:
-```
-kitty is walking...!
-```
+
 
 ### Multilevel 
 A class is derived from another class which is also derived from another different class, such type of inheritance is known as Multilevel inheritance. 
@@ -90,39 +61,7 @@ A class is derived from another class which is also derived from another differe
 	A((Animal)) -- properties ---> B((Cat)) -- properties ---> C((Persian Cat)) 
 ```
 
-Here is an example;
-```java
-class  Movie {
-	String  name;
-	int  year;
-	public  void  type() {
-		System.out.println("Any type of Movie...!");
-	}
-} 
-class  HorrorMovie  extends  Movie {
-	public  void  watch() {
-		System.out.println("Horror movie watching.");
-	}
-}	
-class  SimpleHorrorMovie  extends  HorrorMovie {
-	// inherits both "type & watch" method from the immediate parent "HorroMovie" class.
-	public  void  type() {
-		System.out.println("Simple Horror movie..!");
-	}
-}
-class  MyMovie {
-	public  static  void  main(String[] args) {
-		SimpleHorrorMovie  s_HorrorMovie  =  new  SimpleHorrorMovie();
-		s_HorrorMovie.type();
-		s_HorrorMovie.watch();
-	}
-}
-```
-Here, the **SimpleHorrorMovie** class inherits all the attributes from its two parental classes. So the output of the code segment will be:
-```
-Simple Horror movie..!
-Horror movie watching.
-```
+
 
 ### Hierarchical level
 In such inheritance level, One parent class can have more than one child class. 
@@ -132,39 +71,13 @@ In such inheritance level, One parent class can have more than one child class.
 	A((Book)) -- properties ---> C((Novels))
 	A((Book)) -- properties ---> D((Thriller))
 ```
-Here is an example:
-```java
-class  Book {
-	String  title, author;
-	public  void  genre() {
-		System.out.println("Any type of Book..!");
-	}
-}
-class  Comics  extends  Book {
-	public  void  genre() {
-		System.out.println("Funny Comic books...!");
-	}
-}
-class  Novels  extends  Book {
-	public  void  genre() {
-		System.out.println("This is a Novel...!");
-	}
-}
-class  MyBook {
-	public  static  void  main(String[] args) {
-		Comics  comic  =  new  Comics();
-		Novels  novel  =  new  Novels();
-		comic.genre();
-		novel.genre();
-	}
-}
-```
 
-In the above code segment, **Comics** and **Novels** are the two derived classes of **Book** class. All the properties and attributes of *Book* class are inherited by those two classes. We can define their common properties by their own custom attributes. Thus the output will be:
-```
-Funny Comic books...!
-This is a Novel...!
-``` 
+### Why Multiple inheritance is not allowed in Java ?
+Multiple inheritance means to to inherit properties from different classes at the same time. But it is not allowed in Java. Consider the following example for clear explanation:
+
+Suppose, we have three classes: ```classA```, ```classB```, ```classC```. Let, ```classB``` and ```classC``` are the derived classes of ```classA```. Let's also assume, ```classA``` has a method named as ```foo()```. According to the definition of inheritance, ```classB``` and ```classC``` will also get this ```foo()``` method & provide their own implementation to this ```foo()``` method. If we have another class which inherits both ```classB``` and ```classC```, then it will also get the ```foo()``` method. But the great question is: **Which overridden method will be inherited as both ```classB``` and ```classC``` has it's own implemented foo() method ?** <br
+/>
+Such type of problem is known as **Diamond** problem. Becuase of such scenerio, multiple inheritance is not allowed in Java.  
 
 ### A complete example of inheritance
  Let's assume, we have a parent class named as **Animal**.  It has some attributes (name, colour) and behavior (eat, sleep), which are common for all animal. 
