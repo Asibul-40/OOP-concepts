@@ -503,17 +503,15 @@ To access the private properties of a class, we need to create some public mediu
 
 The prominent difference between abstraction and encapsulation holds at their own implementation level. Abstraction focuses on what must be done and Encapsulation means how it should be done. Let's discuss some major differences between these two terms:
 
-*Data handling:*
-	By the definition of Abstraction, we are only concerned about which type of data are essential to perform some specific task. But in encapsulation, data is used after binding some additional secure layer by using the access modifiers.
- 
+**Data handling:**
+	By the definition of Abstraction, we are only concerned about which type of data are essential to perform some specific task. But in encapsulation, data is used after binding some additional secure layer by using the access modifiers. <br/>
 For example: If we want to open a Bank account on any bank, then the bank demands various types of data from their customer. Such as: Customer name, father's name, mother's name, address, date of birth, spouse's name, tax info, job info, insurance policy etc. Though we provide all these information but all of them are not associated for opening an account. Thus the Bank filters out the valid documents and store those documents in their internal system, which ensures the abstraction and encapsulation concept respectively.
 
-*Data hiding:*  
-Abstraction provides some abstract idea about the design level of any system, whereas encapsulation hides the internal working of any specific action or task.
-
+**Data hiding:**  
+Abstraction provides some abstract idea about the design level of any system, whereas encapsulation hides the internal working of any specific action or task.  <br/>
 For example: By using smartphone, we can perform various tasks like: sending a message, capturing an image, calling a person, listening to music etc. We can only see what these features can do. But we do not need to know the internal logic of how these actions are performed. Thus the internal architecture and design implementations are hidden from the user.
 
-*Implementation:*
+**Implementation:**
 Abstraction can be achieved either by Abstract class or Interface, whereas encapsulation is implemented by using the access modifiers and also by using some public getter & setter methods to access those class members. 
 
 
