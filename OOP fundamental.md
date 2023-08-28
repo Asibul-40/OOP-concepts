@@ -75,6 +75,9 @@ In such inheritance level, One parent class can have more than one child class.
 ### Why Multiple inheritance is not allowed in Java ?
 Multiple inheritance means to to inherit properties from different classes at the same time. But it is not allowed in Java. Consider the following example for clear explanation:
 
+![Untitled Diagram (25)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/55a6b97a-94e0-40f5-aed6-bd1cf851569c)
+
+
 Suppose, we have three classes: ```classA```, ```classB```, ```classC```. Let, ```classB``` and ```classC``` are the derived classes of ```classA```. Let's also assume, ```classA``` has a method named as ```foo()```. According to the definition of inheritance, ```classB``` and ```classC``` will also get this ```foo()``` method & provide their own implementation to this ```foo()``` method. If we have another class which inherits both ```classB``` and ```classC```, then it will also get the ```foo()``` method. But the great question is: **Which overridden method will be inherited as both ```classB``` and ```classC``` has it's own implemented foo() method ?** <br
 />
 Such type of problem is known as **Diamond** problem. Becuase of such scenerio, multiple inheritance is not allowed in Java.  
@@ -83,7 +86,6 @@ Such type of problem is known as **Diamond** problem. Becuase of such scenerio, 
  Let's assume, we have a parent class named as **Animal**.  It has some attributes (name, colour) and behavior (eat, sleep), which are common for all animal. 
 
 ![Untitled Diagram (6)](https://github.com/Asibul-40/OOP-concepts/assets/77221075/7b81b553-d270-4759-9ba0-8fd9747bdbd7)
-
 
  
  ```java
